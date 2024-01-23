@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<!-- Website - www.codingnepalweb.com -->
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Infinite Card Slider JavaScript </title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fontawesome Link for Icons -->
+ 
+
+  <style>
+    /* Import Google font - Poppins */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+    body {
+      display: flex;
+      padding: 0 35px;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      background: linear-gradient(to left top, #031A9A, #8B53FF);
+    }
+    .wrapper {
+     max-width: 1500px;
+      width: 100%;
+      position: relative;
+    }
+    
+    
+    
+    .wrapper .carousel{
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% / 5) - 27px);
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap:27px;
+      border-radius: 8px;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+    .carousel.no-transition {
+      scroll-behavior: auto;
+    }
+    .carousel.dragging {
+      scroll-snap-type: none;
+      scroll-behavior: auto;
+    }
+    .carousel.dragging .card {
+      cursor: grab;
+      user-select: none;
+    }
+    .carousel :where(.card, .img) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .carousel .card {
+      scroll-snap-align: start;
+    
+height: 477px;
+      list-style: none;
+      background: #fff;
+      cursor: pointer;
+      padding-bottom: 15px;
+      flex-direction: column;
+      border-radius: 19px;
+    }
+    .carousel .card .img {
+      background: #8B53FF;
+      height: 148px;
+      width: 148px;
+      border-radius: 50%;
+    }
+    .card .img img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+    }
+    .carousel .card h2 {
+      font-weight: 500;
+      font-size: 1.56rem;
+      margin: 30px 0 5px;
+    }
+    .carousel .card span {
+      color: #6A6D78;
+      font-size: 1.31rem;
+    }
+
+    .dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+      align-items: center;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #6A7178;
+      margin: 0 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .dot.active {
+      background-color: #6A7178;
+      width: 18px; /* Larger width for active dot */
+      height: 18px;
+      
+    
+    }
+    .carousel .card.active-card {
+  background-color: red; /* Set your desired background color */
+ 
+height: 529px;
+
+  
+}
+
+    @media screen and (max-width: 900px) {
+      .wrapper .carousel {
+        grid-auto-columns: calc((100% / 2) - 9px);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      .wrapper .carousel {
+        grid-auto-columns: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <ul class="carousel">
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>Joenas </h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2> Brauers</h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>Jas Brauers</h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>Joenas Bers</h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>enas Brauers</h2>
+            <span>Web Developer</span>
+        </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>Joenas </h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2> Brauers</h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>Jas Brauers</h2>
+            <span>Web Developer</span>
+            </li>
+        <li class="card">
+            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+            <h2>Jas Brauers</h2>
+            <span>Web Developer</span>
+            </li>
+       
+       
+       
+      
+       
+        
+       
+      
+       
+    </ul>
+    <div class="dots"></div>
+   
+  </div>
+  <script>
+    const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+const firstCardWidth = carousel.querySelector(".card").offsetWidth;
+const arrowBtns = document.querySelectorAll(".wrapper i");
+const carouselChildrens = [...carousel.children];
+const dotsContainer = document.querySelector(".dots");
+
+// Create dots dynamically
+for (let i = 0; i < carouselChildrens.length - 4; i++) {
+  const dot = document.createElement("div");
+  dot.classList.add("dot");
+  dot.addEventListener("click", () => {
+    carousel.scrollLeft = i * firstCardWidth;
+  });
+  dotsContainer.appendChild(dot);
+}
+
+const dots = document.querySelectorAll(".dot");
+
+const updateDots = () => {
+  const activeIndex = Math.round(carousel.scrollLeft / firstCardWidth);
+  dots.forEach((dot, index) => {
+    dot.classList.toggle("active", index === activeIndex);
+  });
+
+  // Set styles for the active (middle) card
+  carouselChildrens.forEach((card, index) => {
+    const isMiddleCard = index === activeIndex + 2; // Assuming 2 cards are hidden on both sides
+    card.classList.toggle("active-card", isMiddleCard);
+
+   
+  });
+};
+updateDots();
+
+carousel.addEventListener("scroll", () => {
+  updateDots();
+});
+
+// Function to move the carousel to the next card
+const nextCard = () => {
+  carousel.scrollLeft += firstCardWidth;
+
+  // Reset scroll position to the beginning when reaching the end
+  if (carousel.scrollLeft >= carousel.scrollWidth - carousel.offsetWidth) {
+    carousel.scrollLeft = 0;
+  }
+};
+
+// Auto-play the carousel
+const autoPlayInterval = 4000; // Adjust the interval as needed
+let autoPlayTimer;
+
+const startAutoPlay = () => {
+  autoPlayTimer = setInterval(nextCard, autoPlayInterval);
+};
+
+const stopAutoPlay = () => {
+  clearInterval(autoPlayTimer);
+};
+
+// Start auto-play when the page loads
+startAutoPlay();
+
+// Pause auto-play when the user interacts with the carousel
+carousel.addEventListener("mouseover", stopAutoPlay);
+carousel.addEventListener("mouseleave", startAutoPlay);
+
+
+  </script>
+  
+  
+</body>
+</html>
