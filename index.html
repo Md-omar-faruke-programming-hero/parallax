@@ -18,22 +18,23 @@
       box-sizing: border-box;
       font-family: "Poppins", sans-serif;
     }
-    body {
+    
+   
+    
+    
+    .carouselSection{
+      width: 100%;
+     
+      background: #161618;
+       
+   
+
       display: flex;
-      padding: 0 0px;
+     
       align-items: center;
       justify-content: center;
       min-height: 100vh;
-      background: linear-gradient(to left top, #031A9A, #8B53FF);
     }
-    .wrapper {
-     max-width: 1500px;
-      width: 100%;
-      position: relative;
-    }
-    
-    
-    
     .wrapper .carousel{
       display: grid;
       grid-auto-flow: column;
@@ -46,6 +47,7 @@
       scrollbar-width: none;
       align-items: center;
       margin-bottom: 24px;
+      transition: transform 0.10s ease-out;
     }
     .carousel::-webkit-scrollbar {
       display: none;
@@ -76,6 +78,7 @@ height: 477px;
     
       flex-direction: column;
       border-radius: 19px;
+      position: relative;
     }
     .carousel .card .img {
       background: #8B53FF;
@@ -131,6 +134,32 @@ height: 529px;
 
   
 }
+.carouselSectionText{
+  text-align: center;
+  margin-bottom: 30px;
+  color: #F4F4F4;
+  font-size: 80px;
+  letter-spacing: -4px;
+}
+.carousel .card .icon {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 32px;
+      height: 39px;
+      background: url('path/to/large-icon.png') no-repeat center center;
+      background-size: cover;
+    }
+
+    .carousel .card:not(.active-card) .icon {
+      width: 21px;
+      height: 25px;
+      background: url('path/to/small-icon.png') no-repeat center center;
+      background-size: cover;
+    }
+
+
+    
 
     @media screen and (max-width: 900px) {
       .wrapper .carousel {
@@ -146,66 +175,211 @@ height: 529px;
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <ul class="carousel">
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>Joenas </h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2> Brauers</h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>Jas Brauers</h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>Joenas Bers</h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>enas Brauers</h2>
-            <span>Web Developer</span>
-        </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>Joenas </h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2> Brauers</h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>Jas Brauers</h2>
-            <span>Web Developer</span>
-            </li>
-        <li class="card">
-            <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
-            <h2>Jas Brauers</h2>
-            <span>Web Developer</span>
-            </li>
-       
-       
-       
-      
-       
-        
-       
-      
-       
-    </ul>
-    <div class="dots"></div>
+
+  <section class="preCarouselSection">
+
+  </section>
+  <section class="carouselSection">
    
-  </div>
+    <div class="wrapper">
+      <h2 class="carouselSectionText">Tried, tested and trusted <br> by many businesses</h2>
+      <ul class="carousel">
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Joenas </h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2> Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Jas Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Joenas Bers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>enas Brauers</h2>
+              <span>Web Developer</span>
+          </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Joenas </h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2> Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Jas Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Jas Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+         
+         
+         
+        
+         
+          
+         
+        
+         
+      </ul>
+      <div class="dots"></div>
+     
+    </div>
+  </section>
+  <section class="carouselSection">
+   
+    <div class="wrapper">
+      <h2 class="carouselSectionText">Tried, tested and trusted <br> by many businesses</h2>
+      <ul class="carousel">
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Joenas </h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2> Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Jas Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Joenas Bers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>enas Brauers</h2>
+              <span>Web Developer</span>
+          </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Joenas </h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2> Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Jas Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+          <li class="card">
+            <div >
+              <img  class="icon" src="https://i.ibb.co/cyPdcBy/right-arrow.png" alt="right-arrow">
+            </div>
+
+              <div class="img"><img src="images/img-2.jpg" alt="img" draggable="false"></div>
+              <h2>Jas Brauers</h2>
+              <span>Web Developer</span>
+              </li>
+         
+         
+         
+        
+         
+          
+         
+        
+         
+      </ul>
+      <div class="dots"></div>
+     
+    </div>
+  </section>
+ 
   <script>
     const wrapper = document.querySelector(".wrapper");
 const carousel = document.querySelector(".carousel");
@@ -257,7 +431,7 @@ const nextCard = () => {
 };
 
 // Auto-play the carousel
-const autoPlayInterval = 4000; // Adjust the interval as needed
+const autoPlayInterval = 8000; // Adjust the interval as needed
 let autoPlayTimer;
 
 const startAutoPlay = () => {
